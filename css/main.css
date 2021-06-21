@@ -315,8 +315,7 @@ section.innovation .title {
 section.innovation .img-box {
     width: 74%;
     height: 540px;
-    background: url('/img/product_1.jpg')
-    no-repeat center / cover;
+    background: url('/img/product_1.jpg') no-repeat center / cover;
     margin: 50px auto 0;
     /* 박스 중앙배치 정렬을 위한 기준점 설정 공식 */
     position: relative;
@@ -389,7 +388,7 @@ section.me ul.list {
 
 section.me ul li p {
     line-height: 1.5;
-   
+
 }
 
 section.me ul li:last-child {
@@ -437,7 +436,7 @@ section.me ul.list a.more {
 /* section sns Style */
 
 section.sns {
-    padding: 80px 0;
+    padding: 60px 0;
     height: 500px;
     background: #fff;
 }
@@ -451,7 +450,7 @@ section.sns ul {
     width: 74%;
     margin: 30px auto;
     border-bottom: 2px solid #ddd;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 
@@ -479,6 +478,7 @@ section.sns ul li a .img-box::after {
     top: 0;
     transition: 0.5s;
 }
+
 section.sns ul li a .img-box:hover::after {
     width: 100%;
 }
@@ -498,6 +498,65 @@ section.sns ul li .bottom p:nth-child(2) {
 }
 
 section.sns ul li .bottom p.time {
-    color:gray;
+    color: gray;
     margin-top: 15px;
+}
+
+/* footer style */
+
+footer {
+    padding: 30px auto;
+    height: 100px;
+}
+
+footer .inner {
+    width: 74%;
+    margin: 0 auto;
+    position: relative;
+}
+
+footer .inner .ft-logo {
+    float: left;
+    width: 200px;
+    height: 100px;
+    margin-right: 30px;
+    position: absolute;
+    top: -40px;
+}
+
+footer .inner .ft-logo img {
+    width: 100%;
+}
+
+
+footer ul.address {
+    float: left;
+    margin-left: 200px;
+    position: absolute;
+    top: -20px;
+}
+
+footer ul.address li:first-child{
+    font-weight: 700;
+}
+
+footer ul.address li.en{
+color:gray;
+text-align: left;
+margin-top: 10px;
+}
+
+footer ul.list {
+    float: right;
+}
+
+footer ul.list li {
+    float: left;
+    margin-right: 30px;
+    font-weight: 600;
+}
+
+
+footer ul.list li:last-child{
+color: #f86010;
 }
