@@ -35,6 +35,7 @@ header {
     height: 100px;
     line-height: 100px;
     position: fixed;
+    z-index: 200;
 }
 
 header .inner-header {
@@ -127,6 +128,7 @@ section.main {
 
 section.main .main-title {
     /* 박스 화면 정중앙 배치 */
+    /* 공식 */
     position: absolute;
     left: 50%;
     top: 50%;
@@ -201,19 +203,19 @@ section.about {
 
 }
 
-section.about .title {
+section .title {
     color: #000;
     text-align: center;
 
 }
 
-section.about .title h2 {
+section .title h2 {
     font-size: 45px;
     margin-bottom: 5px;
 }
 
 
-section.about .title p {
+section .title p {
     font-size: 18px;
     color: #555;
 }
@@ -234,18 +236,18 @@ section.about li {
     width: 33.333333%;
 }
 
-section.about ul li a .img-box{
+section.about ul li a .img-box {
     /* 박스 외에 나오는 것은 다 숨겨라. */
     overflow: hidden;
 }
 
-section.about ul li a .img-box img{
+section.about ul li a .img-box img {
     /* 박스 안에 사진 크기를 맞춘다. */
     width: 100%;
     transition: 0.7s;
 }
 
-section.about ul li a:hover .img-box img{
+section.about ul li a:hover .img-box img {
     transform: scale(1.2);
 }
 
@@ -295,5 +297,207 @@ section.about ul li a .text p.more::before {
     /* left, top 0을 주면 기준점이 없어 헤더 맨 위에 생김 */
     /* 방지 하려면 MORE에 포지션 relative를 걸어주면 기준점이 MORE에 생김 */
     left: 0;
+    top: -2px;
+}
+
+/* section innovation Style */
+
+section.innovation {
+    background: #fff;
+    margin-bottom: 150px;
+}
+
+section.innovation .title {
+    color: black;
+    text-align: center;
+}
+
+section.innovation .img-box {
+    width: 74%;
+    height: 540px;
+    background: url('/img/product_1.jpg')
+    no-repeat center / cover;
+    margin: 50px auto 0;
+    /* 박스 중앙배치 정렬을 위한 기준점 설정 공식 */
+    position: relative;
+}
+
+section.innovation .img-box .inner {
+    background: #3a3c4e;
+    width: 80%;
+    /* 박스 중앙배치 정렬 공식 */
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+}
+
+section.innovation .img-box .inner h3 {
+    background: #fff;
+    font-size: 14px;
+    padding: 25px 45px;
+    /* 패딩으로 인한 박스 크기 안커지게 방지 */
+    box-sizing: border-box;
+}
+
+section.innovation .img-box .inner .bottom {
+    color: #fff;
+    /* 줄 높이 조정 */
+    line-height: 1.6;
+    padding: 60px 85px;
+    box-sizing: border-box;
+}
+
+/* float 사용시 정렬이 깨질 시 부모 요소에게 clearfix */
+
+section.innovation .img-box .inner .bottom p {
+    float: left;
+    width: 70%;
+}
+
+section.innovation .img-box .inner .bottom a {
+    float: right;
+    background: #ff8342;
+    border-radius: 50px;
+    padding: 7px 30px;
+}
+
+
+section.innovation .img-box .inner .bottom a:hover {
+    background: #f86010;
+}
+
+section.me {
+    background: url('/img/me.jpg') no-repeat center/cover;
+    height: 800px;
+    position: relative;
+    padding: 80px 0;
+}
+
+
+section.me ul.list {
+    width: 74%;
+    margin: 50px auto;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    line-height: 1.3;
+}
+
+section.me ul li p {
+    line-height: 1.5;
+   
+}
+
+section.me ul li:last-child {
+    padding-bottom: 40px;
+}
+
+section.me ul.list h3 {
+    font-weight: 500;
+    line-height: 3.0;
+    font-size: 18px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+section.me ul.list p {
+    margin-bottom: 30px;
+}
+
+section.me ul.list em {
+    float: left;
+    font-weight: bold;
+    margin-right: 40px;
+    font-size: 15px;
+}
+
+section.me ul.list h3 i {
+    color: orange;
+    margin-right: 15px;
+}
+
+section.me ul.list a i {
+    color: orange;
+}
+
+section.me ul.list a {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+section.me ul.list a.more {
+    font-size: 15px;
+}
+
+
+/* section sns Style */
+
+section.sns {
+    padding: 80px 0;
+    height: 500px;
+    background: #fff;
+}
+
+section.sns li {
+    float: left;
+    width: 33.33333%;
+}
+
+section.sns ul {
+    width: 74%;
+    margin: 30px auto;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 40px;
+}
+
+
+section.sns ul li a .img-box {
+    height: 251px;
+    overflow: hidden;
+    transition: 0.7s;
+    position: relative;
+}
+
+section.sns ul li a .img-box img {
+    width: 100%;
+}
+
+
+
+section.sns ul li a .img-box::after {
+    content: '';
+    width: 0;
+    height: 100%;
+    background: rgb(248, 164, 9, 0.6);
+    display: block;
+    position: absolute;
+    left: 0;
     top: 0;
+    transition: 0.5s;
+}
+section.sns ul li a .img-box:hover::after {
+    width: 100%;
+}
+
+
+section.sns ul li .bottom p.color {
+    color: orange;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+section.sns ul li .bottom p:nth-child(2) {
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+section.sns ul li .bottom p.time {
+    color:gray;
+    margin-top: 15px;
 }
