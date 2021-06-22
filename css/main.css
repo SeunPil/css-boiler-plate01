@@ -13,6 +13,12 @@ br.mo {
     display: none;
 }
 
+/* 모바일 X = 햄버거 X */
+
+header .inner-header .gnb-mobile {
+    display: none;
+}
+
 .clearfix::after {
     content: '';
     display: block;
@@ -449,7 +455,6 @@ section.sns li {
 section.sns ul {
     width: 74%;
     margin: 30px auto;
-    border-bottom: 2px solid #ddd;
     padding-bottom: 30px;
 }
 
@@ -477,9 +482,10 @@ section.sns ul li a .img-box::after {
     left: 0;
     top: 0;
     transition: 0.5s;
+
 }
 
-section.sns ul li a .img-box:hover::after {
+section.sns ul li a:hover .img-box::after {
     width: 100%;
 }
 
@@ -502,11 +508,25 @@ section.sns ul li .bottom p.time {
     margin-top: 15px;
 }
 
+
+#incruit-btn {
+    display: block;
+    width: 280px;
+    background: #ff8342;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 /* footer style */
 
 footer {
     padding: 30px auto;
     height: 100px;
+    border-top: 1px solid black;
 }
 
 footer .inner {
@@ -521,7 +541,7 @@ footer .inner .ft-logo {
     height: 100px;
     margin-right: 30px;
     position: absolute;
-    top: -40px;
+    top: 10px;
 }
 
 footer .inner .ft-logo img {
@@ -533,30 +553,126 @@ footer ul.address {
     float: left;
     margin-left: 200px;
     position: absolute;
-    top: -20px;
+    top: 30px;
 }
 
-footer ul.address li:first-child{
+footer ul.address li:first-child {
     font-weight: 700;
 }
 
-footer ul.address li.en{
-color:gray;
-text-align: left;
-margin-top: 10px;
+footer ul.address li.en {
+    color: gray;
+    text-align: left;
+    margin-top: 10px;
 }
 
 footer ul.list {
     float: right;
+    top: 10px;
 }
 
 footer ul.list li {
     float: left;
     margin-right: 30px;
     font-weight: 600;
+    top: 40px;
+    position: relative;
 }
 
 
-footer ul.list li:last-child{
-color: #f86010;
+footer ul.list li:last-child {
+    color: #f86010;
+}
+
+footer .inner .list li a:hover {
+    color: #f86010;
+    text-decoration: underline;
+
+}
+
+
+/* 반응형작업 */
+/* 노트북 해상도 (1599px) */
+
+@media screen and (max-width: 1599px) {
+    header .inner-header {
+        width: 95%;
+    }
+
+    header .inner-header nav.gnb {
+        margin-left: 50px;
+    }
+
+    header .inner-header nav.gnb li {
+        margin-right: 50px;
+    }
+
+    header .inner-header nav.tnb li {
+        margin-right: 10px;
+    }
+
+    section.about ul,
+    section.innovation .img-box,
+    section.me ul.list,
+    section.sns ul {
+        width: 95%;
+    }
+
+    footer .inner {
+        width: 95%;
+    }
+
+    footer .inner .list li {
+        margin-left: 20px;
+    }
+}
+
+/* 태블릿 1024px 해상도 (아이패드 프로) */
+
+@media screen and (max-width: 1024px) {
+
+    header .inner-header nav.gnb,
+    header .inner-header nav.tnb {
+        display: none;
+    }
+
+    header .inner-header .gnb-mobile {
+        float: right;
+        font-size: 40px;
+        color: #fff;
+        display: block;
+    }
+
+    section.main .main-title {
+        width: 85%;
+    }
+
+    section.me ul.in li {
+        margin-bottom: 0;
+    }
+
+    section.me ul.in li p {
+        margin-bottom: 10px;
+    }
+
+    section.sns ul li a .img-box {
+        height: 175px;
+    }
+
+    section.sns ul li a .bottom {
+        padding-left: 5px;
+    }
+
+    footer .inner .list {
+        display: none;
+    }
+    footer .inner .ft-logo {
+        margin-top: 0px;
+    }
+
+    footer ul.address{
+        top: 30px;
+        margin-right: 50px;
+    }  
+
 }
